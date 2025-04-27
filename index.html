@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <header>
+        <h1>TaskFlow</h1>
+        <div class="nav-icons">
+            <i class="fa-solid fa-user"></i>
+            <a href="./public/html/signup.html">
+                <button class="btn">Signup</button>
+            </a>
+            <a href="./public/html/login.html">
+                <button class="btn">Login</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <div class="myDashboard">
+                <button class="tab-link active" data-target="dashboard"><i
+                        class="fa-solid fa-blog"></i>Dashboard</button>
+            </div>
+            <button class="tab-link" data-target="boards"><i class="fa-solid fa-user"></i>My boards</button>
+            <div class="myNotifications">
+                <button class="tab-link" data-target="notification"><i class="fa-solid fa-bell"></i>Notifications
+                </button>
+            </div>
+            <button class="tab-link" data-target="logout" id="logoutUser"><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+        </aside>
+
+        <div class="tabs">
+            <div class="tab-content active" id="dashboard">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1> Welcome Mahanoor to TaskFlow</h1>
+                        <div class="buttons">
+                            <button class="add-task btn">Add Task</button>
+                            <button class="add-board btn">Add Board</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="./public/assets/hero.jpg" alt="hero">
+                    </div>
+                </div>
+                <div class="my-tasks">
+                    <div class="task-categories">
+                        <a href="#" class="to-do"><i class="fa-solid fa-clipboard-list"></i> To - Do</a>
+                        <a href="#" class="in-progress"><i class="fa-solid fa-bars-progress"></i></i> In progress</a>
+                        <a href="#" class="completed"><i class="fa-solid fa-circle-check"></i> Completed</a>
+                    </div>
+
+                    <section class="tasks-container">
+                        <div class="task-card">
+                            <h1 class="title">Create to do app</h1>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+                                numquam
+                                a
+                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
+                                inventore
+                                facilis blanditiis dolores architecto temporibus!</p>
+                            <button class="task-status">In-progress</button>
+                        </div>
+                        <div class="task-card">
+                            <h1 class="title">Create to do app</h1>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+                                numquam
+                                a
+                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
+                                inventore
+                                facilis blanditiis dolores architecto temporibus!</p>
+                            <button class="task-status">In-progress</button>
+                        </div>
+                        <div class="task-card">
+                            <h1 class="title">Create to do app</h1>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+                                numquam
+                                a
+                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
+                                inventore
+                                facilis blanditiis dolores architecto temporibus!</p>
+                            <button class="task-status">In-progress</button>
+                        </div>
+                        <div class="task-card">
+                            <h1 class="title">Create to do app</h1>
+                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+                                numquam
+                                a
+                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
+                                inventore
+                                facilis blanditiis dolores architecto temporibus!</p>
+                            <button class="task-status">In-progress</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="boards" class="user-boards" class="tab-content">
+                <h1>My Boards</h1>
+                <div class="board-categories">
+                    <button class="btn">School</button>
+                    <button class="btn">Home</button>
+                    <button class="btn">Business</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <h2>Create New Board</h2>
+            <div class="field">
+                <label for="boardNameInput">Board Name:</label>
+                <input type="text" id="boardNameInput" placeholder="Enter board name...">
+                <button id="addBoardButton" class="btn">Create Board</button>
+                <i class="fa-solid fa-pen" id="editBoardName"></i>
+                <i class="fa-solid fa-trash" id="deleteBoard"></i>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p> - This task tracker developed by -</p>
+        <img src="./public/assets/my_logo.png">
+        <h3>Mahanoor khan</h3>
+        <div class="creater_socials">
+            <a href="https://facebook.com//people/MK-creatives/61572301925296/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/mk_creative1019/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mahanoor-khan/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Mahanoor123" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+
+    </footer>
+    <script type="module" src="./public/js/index.js"></script>
+</body>
+
+</html>

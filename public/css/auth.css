@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fc3a79;
+  --secondary_color: #fe572e;
+  --tertiary-color: #536878;
+  --background-color: rgba(0, 0, 0, 0.1);
+  --gradient_color: linear-gradient(#fe572e, #fc3a79);
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn {
+  all: unset;
+  width: 100%;
+  color: #f4f4f4;
+  font-family: "roboto";
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--gradient_color);
+  border-radius: 1rem;
+  padding: 0.6rem 0;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+  &:hover i {
+    transform: translateX(4px);
+  }
+}
+
+/*************** Toaster Section *****************/
+
+.toast-container {
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .toast-container.top-right { top: 20px; right: 20px; align-items: flex-end; }
+  .toast-container.top-left  { top: 20px; left: 20px; align-items: flex-start; }
+  .toast-container.bottom-right { bottom: 20px; right: 20px; align-items: flex-end; }
+  .toast-container.bottom-left  { bottom: 20px; left: 20px; align-items: flex-start; }
+  .toast-container.center {top: 0; left: 50%; transform: translateX(-50%); align-items: center;}
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--background-color2);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    min-width: 250px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--primary-accent-color);
+    color: var(--white-color);
+    font-family: "lato";
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+  }
+  .toast-success { border-left: 5px solid #4CAF50; }
+  .toast-error   { border-left: 5px solid #F44336; }
+  .toast-warning { border-left: 5px solid #FF9800; }
+  .toast-info    { border-left: 5px solid var(--primary-accent-color); }
+  .toast-icon { font-size: 1.2rem; }
+  .toast-message { flex: 1; }
+  .toast-close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--black-tint2);
+  }
+  .toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+    animation-name: progress;
+    animation-timing-function: linear;
+  }
+  .toast-success .toast-progress { background-color: #4CAF50; }
+  .toast-error .toast-progress   { background-color: #F44336; }
+  .toast-warning .toast-progress { background-color: #FF9800; }
+  .toast-info .toast-progress    { background-color: var(--primary-accent-color); }
+  @keyframes progress {
+    from { width: 100%; }
+    to   { width: 0%; }
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+/********** Mutual Forms Styling **********/
+/********** Mutual Forms Styling **********/
+/********** Mutual Forms Styling **********/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "roboto";
+}
+.login_form,
+.signup_form {
+  border-radius: 1rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+  width: 35vw;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+}
+.login_form .profile,
+.signup_form .profile {
+  width: 9rem;
+  display: block;
+  margin: 0 auto;
+}
+.login_form .form_inputs,
+.signup_form .form_inputs {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form_inputs input {
+  all: unset;
+  border: 1px solid #222;
+  border-radius: 1rem;
+  color: #222;
+  font-family: "roboto";
+  font-weight: 300;
+  padding: 0.5rem;
+
+  &:focus {
+    border: 2px solid var(--primary-accent-color);
+  }
+}
+.google_login p,
+.google_signup p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #222;
+  margin: 1rem 0;
+}
+.google_login img,
+.google_signup img {
+  width: 5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/************************ SignUp form Styling **************************/
+/************************ SignUp form Styling **************************/
+
+.signup_form {
+  margin: 2rem auto;
+}
+.signup_btn button {
+  margin-top: 3rem;
+}
+.password_input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #222;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: #222;
+  font-weight: 300;
+}
+#userPassword {
+  all: unset;
+}
+#eyeIcon {
+  color: #222;
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+  transition: color 0.5s linear;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.password-requirements {
+  display: none;
+  width: 100%;
+  background: var(--primary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.password-requirements label {
+  display: block;
+  font-size: 1rem;
+  color: #222;
+}
+.signup_form .login_link {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #222;
+  margin-top: 2rem;
+}
+.signup_form .login_link a {
+  color: #5a5a5a;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+/************************ Login form Styling **************************/
+/************************ Login form Styling **************************/
+/************************ Login form Styling **************************/
+/************************ Login form Styling **************************/
+
+.login_form {
+  margin: 2rem auto;
+}
+.login_form button {
+  margin-top: 3rem;
+}
+.form_links {
+  display: flex;
+  justify-self: flex-end;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #222;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.login_form .signup_link {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #5d5d5d;
+  margin-top: 2rem;
+}
+.login_form .signup_link a {
+  color: #5a5a5a;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
