@@ -14,22 +14,30 @@
         <h1>TaskFlow</h1>
         <div class="nav-icons">
             <i class="fa-solid fa-user"></i>
+            <a href="./public/html/login.html">
+                <button class="logout btn">Logout</button>
+            </a>
             <a href="./public/html/signup.html">
-                <button class="btn">Signup</button>
+                <button class="signup btn">Signup</button>
             </a>
             <a href="./public/html/login.html">
-                <button class="btn">Login</button>
+                <button class="login btn">Login</button>
             </a>
         </div>
     </header>
 
     <main>
         <aside>
+            <div id="modernLoader" class="modern-loader hidden">
+                <div class="brightness-spinner">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+            </div>
             <div class="myDashboard">
                 <button class="tab-link active" data-target="dashboard"><i
                         class="fa-solid fa-blog"></i>Dashboard</button>
             </div>
-            <button class="tab-link" data-target="boards"><i class="fa-solid fa-user"></i>My boards</button>
+            <button class="tab-link" data-target="boards"><i class="fa-solid fa-user"></i>My Tasks</button>
             <div class="myNotifications">
                 <button class="tab-link" data-target="notification"><i class="fa-solid fa-bell"></i>Notifications
                 </button>
@@ -42,10 +50,9 @@
             <div class="tab-content active" id="dashboard">
                 <div class="hero">
                     <div class="hero-content">
-                        <h1> Welcome Mahanoor to TaskFlow</h1>
+                        <h1> Welcome to TaskFlow</h1>
                         <div class="buttons">
                             <button class="add-task btn">Add Task</button>
-                            <button class="add-board btn">Add Board</button>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -53,76 +60,20 @@
                     </div>
                 </div>
                 <div class="my-tasks">
-                    <div class="task-categories">
-                        <a href="#" class="to-do"><i class="fa-solid fa-clipboard-list"></i> To - Do</a>
-                        <a href="#" class="in-progress"><i class="fa-solid fa-bars-progress"></i></i> In progress</a>
-                        <a href="#" class="completed"><i class="fa-solid fa-circle-check"></i> Completed</a>
+                    <div class="column" id="to-do">
+                        <h3 class="to-do"><i class="fa-solid fa-clipboard-list"></i>To - Do</h3>
+                        <div class="task-container" data-status="to-do" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     </div>
-
-                    <section class="tasks-container">
-                        <div class="task-card">
-                            <h1 class="title">Create to do app</h1>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-                                numquam
-                                a
-                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
-                                inventore
-                                facilis blanditiis dolores architecto temporibus!</p>
-                            <button class="task-status">In-progress</button>
-                        </div>
-                        <div class="task-card">
-                            <h1 class="title">Create to do app</h1>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-                                numquam
-                                a
-                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
-                                inventore
-                                facilis blanditiis dolores architecto temporibus!</p>
-                            <button class="task-status">In-progress</button>
-                        </div>
-                        <div class="task-card">
-                            <h1 class="title">Create to do app</h1>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-                                numquam
-                                a
-                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
-                                inventore
-                                facilis blanditiis dolores architecto temporibus!</p>
-                            <button class="task-status">In-progress</button>
-                        </div>
-                        <div class="task-card">
-                            <h1 class="title">Create to do app</h1>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-                                numquam
-                                a
-                                maiores porro vero sint pariatur id rerum soluta nostrum, voluptas in error incidunt
-                                inventore
-                                facilis blanditiis dolores architecto temporibus!</p>
-                            <button class="task-status">In-progress</button>
-                        </div>
-                    </section>
+                    <div class="column" id="in-progress">
+                        <h3 class="in-progress"><i class="fa-solid fa-bars-progress"></i>In Progress</h3>
+                        <div class="task-container" data-status="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <div class="column" id="completed">
+                        <h3 class="completed"><i class="fa-solid fa-circle-check"></i>Completed</h3>
+                        <div class="task-container" data-status="completed" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
                 </div>
             </div>
-            <div id="boards" class="user-boards" class="tab-content">
-                <h1>My Boards</h1>
-                <div class="board-categories">
-                    <button class="btn">School</button>
-                    <button class="btn">Home</button>
-                    <button class="btn">Business</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="board-container">
-            <h2>Create New Board</h2>
-            <div class="field">
-                <label for="boardNameInput">Board Name:</label>
-                <input type="text" id="boardNameInput" placeholder="Enter board name...">
-                <button id="addBoardButton" class="btn">Create Board</button>
-                <i class="fa-solid fa-pen" id="editBoardName"></i>
-                <i class="fa-solid fa-trash" id="deleteBoard"></i>
-            </div>
-
         </div>
     </main>
 
